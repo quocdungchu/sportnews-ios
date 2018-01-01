@@ -14,7 +14,6 @@
 		AB9AE4C01FFA79070029484B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB9AE4BE1FFA79070029484B /* Main.storyboard */; };
 		AB9AE4C21FFA79070029484B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB9AE4C11FFA79070029484B /* Assets.xcassets */; };
 		AB9AE4C51FFA79070029484B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB9AE4C31FFA79070029484B /* LaunchScreen.storyboard */; };
-		AB9AE4D01FFA79070029484B /* sportnewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE4CF1FFA79070029484B /* sportnewsTests.swift */; };
 		AB9AE4DC1FFA7A240029484B /* ArticleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE4DB1FFA7A240029484B /* ArticleUseCase.swift */; };
 		AB9AE4DE1FFA7A300029484B /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE4DD1FFA7A300029484B /* Article.swift */; };
 		AB9AE4E01FFA7B530029484B /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE4DF1FFA7B530029484B /* Source.swift */; };
@@ -57,7 +56,6 @@
 		AB9AE4C41FFA79070029484B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB9AE4C61FFA79070029484B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB9AE4CB1FFA79070029484B /* sportnewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sportnewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB9AE4CF1FFA79070029484B /* sportnewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sportnewsTests.swift; sourceTree = "<group>"; };
 		AB9AE4D11FFA79070029484B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB9AE4DB1FFA7A240029484B /* ArticleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleUseCase.swift; sourceTree = "<group>"; };
 		AB9AE4DD1FFA7A300029484B /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				AB9AE5091FFA9C240029484B /* DateISO8601Tests.swift */,
-				AB9AE4CF1FFA79070029484B /* sportnewsTests.swift */,
 				AB9AE4D11FFA79070029484B /* Info.plist */,
 			);
 			path = sportnewsTests;
@@ -541,7 +538,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB9AE50A1FFA9C240029484B /* DateISO8601Tests.swift in Sources */,
-				AB9AE4D01FFA79070029484B /* sportnewsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
