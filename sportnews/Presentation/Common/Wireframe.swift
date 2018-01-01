@@ -1,26 +1,28 @@
 import UIKit
 
-protocol Wireframe {
+protocol Wireframe: class {
   func show(with transition: Transition)
   func navigate(to wireframe: Wireframe, with transitionType: TransitionType)
   func back()
 }
 
 class BaseWireframe {
-  weak var viewController: UIViewController?
+  private var viewController: UIViewController
   private var transition: Transition?
+  
+  init(_ viewController: UIViewController) {
+    self.viewController = viewController
+  }
 }
 
 extension BaseWireframe: Wireframe {
   func show(with transition: Transition) {
-    guard let viewController = viewController else { return }
     self.transition = transition
     transition.show(viewController)
   }
   
   func navigate(to wireframe: Wireframe, with transitionType: TransitionType) {
-    guard let source = viewController else { return }
-    wireframe.show(with: Transitions.of(type: transitionType, source: source))
+    wireframe.show(with: Transitions.of(type: transitionType, source: viewController))
   }
   
   func back() {
