@@ -10,11 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
       
-      Components.of(ArticleUseCase.self).load(sourceId: .espn, option: .topHeadlines)
-        .subscribe(onSuccess: { articles in
-          print("\(articles)")
-        })
-        .disposed(by: bag)
+      window?.rootViewController = HomeComponent().view
       
       return true
     }
