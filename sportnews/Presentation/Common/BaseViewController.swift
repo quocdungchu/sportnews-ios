@@ -10,16 +10,16 @@ class BaseViewController<ViewModelType: ViewModel>: UIViewController, View {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    viewModel.onDidLoad()
+    viewModel.viewDidLoad()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    viewModel.onWillAppear()
+    viewModel.viewWillAppear()
   }
   
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    viewModel.onDidDisappear()
+    viewModel.viewDidDisappear()
   }
 }

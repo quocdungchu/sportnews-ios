@@ -8,7 +8,8 @@ class HomeComponent: Component<HomeViewController, HomeViewModel, HomeWireframe>
     let wireframe = HomeWireframeImpl(controller)
 
     let viewModel = HomeViewModel(
-      articleUseCase: Components.of(ArticleUseCase.self),
+      useCase: Components.of(ArticleUseCase.self),
+      eventReceiver: Components.of(ArticleEventReceiver.self),
       wireframe: wireframe
     )
 

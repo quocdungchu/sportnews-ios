@@ -1,7 +1,7 @@
 import RxSwift
 
 enum ArticleEvent {
-  case didLoad(articles: [Article], sourceId: Source.Id)
+  case didLoad(articles: [Article], sourceId: Source.Id, option: LoadingOption)
 }
 
 protocol ArticleEventSender {

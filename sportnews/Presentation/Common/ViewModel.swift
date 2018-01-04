@@ -1,16 +1,16 @@
 protocol ViewModel: class {
-  func onDidLoad()
-  func onWillAppear()
-  func onDidDisappear()
+  func viewDidLoad()
+  func viewWillAppear()
+  func viewDidDisappear()
 }
 
 class BaseViewModel: ViewModel {
-  func onDidLoad() {
+  func viewDidLoad() {
   }
 
-  func onWillAppear() {
+  func viewWillAppear() {
   }
   
-  func onDidDisappear() {
+  func viewDidDisappear() {
   }
 }
