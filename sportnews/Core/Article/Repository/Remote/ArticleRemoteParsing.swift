@@ -11,8 +11,7 @@ extension JSON {
     guard let title = self["title"].string,
       let description = self["description"].string,
       let url = self["url"].string,
-      let imageUrl = self["urlToImage"].string,
-      let publishedAt = self["publishedAt"].string?.dateFromISO8601 else
+      let imageUrl = self["urlToImage"].string else
     {
       throw RemoteError(.badJsonFormat)
     }
@@ -25,7 +24,7 @@ extension JSON {
       description: description,
       url: url,
       imageUrl: imageUrl,
-      publishedAt: publishedAt,
+      publishedAt: self["publishedAt"].string?.dateFromISO8601,
       tags: tags
     )
   }

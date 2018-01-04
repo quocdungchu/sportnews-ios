@@ -1,4 +1,5 @@
-class Component<ViewType: View, ViewModelType, WireframeType> where ViewType.ViewModelType ==  ViewModelType, ViewType.ViewModelType.WireframeType == WireframeType {
+class Component<ViewType: View, ViewModelType, WireframeType>
+  where ViewType.ViewModelType == ViewModelType {
   
   let view: ViewType
   let viewModel: ViewModelType
@@ -14,7 +15,6 @@ class Component<ViewType: View, ViewModelType, WireframeType> where ViewType.Vie
   
   private func setup() {
     view.viewModel = viewModel
-    viewModel.wireframe = wireframe
   }
 }
 

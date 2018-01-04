@@ -7,7 +7,7 @@ protocol Wireframe: class {
 }
 
 class BaseWireframe {
-  private var viewController: UIViewController
+  private weak var viewController: UIViewController!
   private var transition: Transition?
   
   init(_ viewController: UIViewController) {

@@ -8,6 +8,6 @@ struct Article {
   let description: String
   let url: String
   let imageUrl: String
-  let publishedAt: Date
+  let publishedAt: Date?
   let tags: [Tag]
 }

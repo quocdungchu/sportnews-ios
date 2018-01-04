@@ -38,7 +38,7 @@
 		AB9AE51D1FFAB3E70029484B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE51C1FFAB3E70029484B /* HomeViewModel.swift */; };
 		AB9AE51F1FFAB4020029484B /* HomeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE51E1FFAB4020029484B /* HomeComponent.swift */; };
 		AB9AE5251FFAB5030029484B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE5241FFAB5030029484B /* ViewModel.swift */; };
-		AB9AE5271FFAB5B70029484B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE5261FFAB5B70029484B /* View.swift */; };
+		AB9AE5271FFAB5B70029484B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE5261FFAB5B70029484B /* BaseViewController.swift */; };
 		AB9AE5291FFAC3E60029484B /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9AE5281FFAC3E60029484B /* Component.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +90,7 @@
 		AB9AE51C1FFAB3E70029484B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AB9AE51E1FFAB4020029484B /* HomeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponent.swift; sourceTree = "<group>"; };
 		AB9AE5241FFAB5030029484B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		AB9AE5261FFAB5B70029484B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		AB9AE5261FFAB5B70029484B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AB9AE5281FFAC3E60029484B /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		CC81D80B973844F912D65489 /* Pods_sportnews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sportnews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA290EF8D363605EC1385A6 /* Pods-sportnewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sportnewsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-sportnewsTests/Pods-sportnewsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -299,7 +299,7 @@
 				AB9AE5121FFAA86E0029484B /* Wireframe.swift */,
 				AB9AE5141FFAACEF0029484B /* Transition.swift */,
 				AB9AE5241FFAB5030029484B /* ViewModel.swift */,
-				AB9AE5261FFAB5B70029484B /* View.swift */,
+				AB9AE5261FFAB5B70029484B /* BaseViewController.swift */,
 				AB9AE5281FFAC3E60029484B /* Component.swift */,
 			);
 			path = Common;
@@ -593,7 +593,7 @@
 				AB9AE4FC1FFA878B0029484B /* DateISO8601.swift in Sources */,
 				AB9AE5291FFAC3E60029484B /* Component.swift in Sources */,
 				AB9AE4F11FFA82B40029484B /* RemoteError.swift in Sources */,
-				AB9AE5271FFAB5B70029484B /* View.swift in Sources */,
+				AB9AE5271FFAB5B70029484B /* BaseViewController.swift in Sources */,
 				AB9AE51B1FFAB3DB0029484B /* HomeWireframe.swift in Sources */,
 				AB9AE4ED1FFA80C50029484B /* API.swift in Sources */,
 				AB9AE5131FFAA86E0029484B /* Wireframe.swift in Sources */,

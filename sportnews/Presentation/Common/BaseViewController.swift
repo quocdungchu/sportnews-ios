@@ -2,39 +2,24 @@ import UIKit
 
 protocol View: class {
   associatedtype ViewModelType: ViewModel
-  var viewModel: ViewModelType? { get set }
-}
-
-extension View {
-  func onDidLoad() {
-    viewModel?.onDidLoad()
-  }
-  
-  func onWillAppear() {
-    viewModel?.onWillAppear()
-  }
-  
-  func onDidDisappear() {
-    viewModel?.onDidDisappear()
-  }
+  var viewModel: ViewModelType! { get set }
 }
 
 class BaseViewController<ViewModelType: ViewModel>: UIViewController, View {
-  
-  var viewModel: ViewModelType?
+  var viewModel: ViewModelType!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    onDidLoad()
+    viewModel.onDidLoad()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    onWillAppear()
+    viewModel.onWillAppear()
   }
   
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    onDidDisappear()
+    viewModel.onDidDisappear()
   }
 }
