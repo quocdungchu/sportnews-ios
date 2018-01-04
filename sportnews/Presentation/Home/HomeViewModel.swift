@@ -2,6 +2,9 @@ import RxSwift
 
 class HomeViewModel: BaseViewModel {
   
+  let didTopHealinesArticlesLoad = PublishSubject<[Article]>()
+  let didAllRecentArticlesLoad = PublishSubject<[Article]>()
+  
   private let useCase: ArticleUseCase
   private let eventReceiver: ArticleEventReceiver
   private let wireframe: HomeWireframe
