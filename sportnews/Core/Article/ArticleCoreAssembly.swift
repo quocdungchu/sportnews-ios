@@ -12,9 +12,31 @@ class ArticleCoreAssembly: Assembly {
     }
     .inObjectScope(.container)
     
+    container.register(ArticleLocalRepository.self) { _ in
+      ArticleLocalRepositoryImpl(configuration: RealmConfigurations.main)
+    }
+    .inObjectScope(.container)
+    
+    container.register (ArticleEventCenter.self) { _ in
+      ArticleEventCenter()
+    }
+    .inObjectScope(.container)
+
+    container.register (ArticleEventSender.self) { resolver in
+      resolver.resolve(ArticleEventCenter.self)!
+    }
+    .inObjectScope(.container)
+    
+    container.register (ArticleEventReceiver.self) { resolver in
+      resolver.resolve(ArticleEventCenter.self)!
+    }
+    .inObjectScope(.container)
+    
     container.register (ArticleUseCase.self) { resolver in
       ArticleUseCaseImpl(
-        remoteRepository: resolver.resolve(ArticleRemoteRepositiory.self)!
+        remoteRepository: resolver.resolve(ArticleRemoteRepositiory.self)!,
+        localRepository: resolver.resolve(ArticleLocalRepository.self)!,
+        eventSender: resolver.resolve(ArticleEventSender.self)!
       )
     }
     .inObjectScope(.container)

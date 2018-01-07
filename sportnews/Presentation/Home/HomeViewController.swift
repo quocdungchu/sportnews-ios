@@ -7,4 +7,3 @@ class HomeViewController: BaseViewController<HomeViewModel> {
     print("HomeViewController view did load")
   }
 }
-

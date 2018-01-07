@@ -1,22 +1,16 @@
 protocol ViewModel: class {
-  associatedtype WireframeType: Wireframe
-  weak var wireframe: WireframeType? { get set }
-
-  func onDidLoad()
-  func onWillAppear()
-  func onDidDisappear()
+  func viewDidLoad()
+  func viewWillAppear()
+  func viewDidDisappear()
 }
 
-class BaseViewModel<WireframeType: Wireframe>: ViewModel {
-  
-  weak var wireframe: WireframeType?
-  
-  func onDidLoad() {
+class BaseViewModel: ViewModel {
+  func viewDidLoad() {
+  }
+
+  func viewWillAppear() {
   }
   
-  func onWillAppear() {
-  }
-  
-  func onDidDisappear() {
+  func viewDidDisappear() {
   }
 }

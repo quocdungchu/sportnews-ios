@@ -3,6 +3,8 @@ struct Source {
     case espn = "espn"
   }
   
+  static let allIds: [Id] = [.espn]
+  
   let id: Id
   let name: String
 }

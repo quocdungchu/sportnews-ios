@@ -9,23 +9,19 @@ extension Source.Id {
 extension JSON {
   func makeArticle(sourceId: String, tags: [Tag] = []) throws -> Article {
     guard let title = self["title"].string,
-      let description = self["description"].string,
-      let url = self["url"].string,
-      let imageUrl = self["urlToImage"].string,
-      let publishedAt = self["publishedAt"].string?.dateFromISO8601 else
+      let url = self["url"].string else
     {
       throw RemoteError(.badJsonFormat)
     }
     
     return Article(
-      id: url,
       sourceId: sourceId,
       author: self["author"].string,
       title: title,
-      description: description,
+      summary: self["description"].string,
       url: url,
-      imageUrl: imageUrl,
-      publishedAt: publishedAt,
+      imageUrl: self["urlToImage"].string,
+      publishedAt: self["publishedAt"].string?.dateFromISO8601,
       tags: tags
     )
   }
