@@ -10,7 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
-    HomeComponent().wireframe.showAsRoot()
+    ArticleListComponent(section: .topHeadlines).wireframe.showAsRoot()
     
     return true
   }

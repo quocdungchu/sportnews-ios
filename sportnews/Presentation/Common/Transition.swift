@@ -3,6 +3,7 @@ import UIKit
 enum TransitionType {
   case settingRoot
   case pushing
+  case presenting
 }
 
 enum Transitions {
@@ -13,6 +14,9 @@ enum Transitions {
     
     case .pushing:
       return TransitionPushing(source)
+      
+    case .presenting:
+      return TransitionPresenting(source)
     }
   }
 }
@@ -42,9 +46,29 @@ class TransitionPushing: Transition {
 
 class TransitionSettingRoot: Transition {
   func show(_ viewController: UIViewController) {
-    UIApplication.shared.delegate?.window??.rootViewController = viewController
+    let navigationController = UINavigationController()
+    navigationController.viewControllers = [viewController]
+    UIApplication.shared.delegate?.window??.rootViewController = navigationController
   }
   
   func back() {
+  }
+}
+
+class TransitionPresenting: Transition {
+  private weak var source: UIViewController?
+  
+  init(_ source: UIViewController?){
+    self.source = source
+  }
+  
+  func show(_ viewController: UIViewController) {
+    source?.present(viewController, animated: true, completion: nil)
+  }
+  
+  func back() {
+    if let source = source {
+      source.dismiss(animated: true, completion: nil)
+    }
   }
 }

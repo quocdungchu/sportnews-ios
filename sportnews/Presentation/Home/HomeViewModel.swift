@@ -22,10 +22,15 @@ class HomeViewModel: BaseViewModel {
     eventReceiver.onReceive.observeOn(MainScheduler.instance)
       .subscribe(onNext: { event in
         switch event {
-        case .didLoad(let articles, let sourceId, let option):
+        case .didDownload(let articles, let sourceId, let section):
+          print("didDownload -----------------")
+
           print("articles \(articles)")
           print("sourceId \(sourceId)")
-          print("option \(option)")
+          print("section \(section)")
+          
+        case .didSynchronize:
+          print("didSynchronize -----------------")
         }
       })
       .disposed(by: bag)

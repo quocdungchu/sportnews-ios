@@ -1,7 +1,7 @@
 import RxSwift
 
 protocol ArticleRemoteRepositiory {
-  func load(sourceId: Source.Id, option: LoadingOption) -> Single<[Article]>
+  func load(sourceId: Source.Id, section: Section) -> Single<[Article]>
 }
 
 class ArticleRemoteRepositioryImpl: BaseRemoteRepository {
@@ -23,8 +23,8 @@ class ArticleRemoteRepositioryImpl: BaseRemoteRepository {
 }
 
 extension ArticleRemoteRepositioryImpl: ArticleRemoteRepositiory {
-  func load(sourceId: Source.Id, option: LoadingOption) -> Single<[Article]> {
-    switch option {
+  func load(sourceId: Source.Id, section: Section) -> Single<[Article]> {
+    switch section {
     case .topHeadlines:
       return loadTopHeadlines(sourceId: sourceId)
         

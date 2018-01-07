@@ -1,3 +1,3 @@
-enum Tag {
-  case topHeadlines
+enum Tag: String {
+  case topHeadlines = "topHeadlines"
 }

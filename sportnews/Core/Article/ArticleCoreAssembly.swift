@@ -12,6 +12,11 @@ class ArticleCoreAssembly: Assembly {
     }
     .inObjectScope(.container)
     
+    container.register(ArticleLocalRepository.self) { _ in
+      ArticleLocalRepositoryImpl(configuration: RealmConfigurations.main)
+    }
+    .inObjectScope(.container)
+    
     container.register (ArticleEventCenter.self) { _ in
       ArticleEventCenter()
     }
@@ -30,6 +35,7 @@ class ArticleCoreAssembly: Assembly {
     container.register (ArticleUseCase.self) { resolver in
       ArticleUseCaseImpl(
         remoteRepository: resolver.resolve(ArticleRemoteRepositiory.self)!,
+        localRepository: resolver.resolve(ArticleLocalRepository.self)!,
         eventSender: resolver.resolve(ArticleEventSender.self)!
       )
     }

@@ -1,7 +1,8 @@
 import RxSwift
 
 enum ArticleEvent {
-  case didLoad(articles: [Article], sourceId: Source.Id, option: LoadingOption)
+  case didDownload(articles: [Article], sourceId: Source.Id, section: Section)
+  case didSynchronize
 }
 
 protocol ArticleEventSender {
